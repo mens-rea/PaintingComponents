@@ -6,16 +6,22 @@ public class Painting extends JPanel{
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
 
-		g.fillOval(0, 250, 50, 100);
+		g.setColor(Color.ORANGE);
+		g.fillRect(550, 200, 70, 350);
+		g.fillRect(650, 200, 70, 350);
+		g.fillRect(750, 200, 70, 350);
+		
 	}
 
 	public static void main(String args[]){
 		JFrame myFrame = new JFrame("Painting");
-		// JPanel panel1 = new JPanel();
+		 //JPanel panel1 = new JPanel();
 
 		Painting myPainting = new Painting();
 
-		// panel1.setBackground(Color.GREEN);
+		myPainting.setBackground(Color.BLACK);
+
+		 //panel1.setBackground(Color.BLACK);
 
 		myFrame.add(myPainting);
 
