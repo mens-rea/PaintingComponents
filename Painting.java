@@ -66,11 +66,7 @@ public class Painting extends JPanel{
 	public static void main(String args[]){
 		JFrame myFrame = new JFrame("Painting");
 		JPanel panel1 = new JPanel();
-         JLabel label = new JLabel("LOUIE ALDRIN CABRAL");
-         label.setVisible(true);
-         label.setSize(500,100);
-         myFrame.setResizable(false);
-         label.setBounds(100,200,200,200);
+		
 		Painting myPainting = new Painting();
 
 		panel1.setBackground(Color.GREEN);
