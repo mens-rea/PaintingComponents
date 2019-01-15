@@ -57,7 +57,7 @@ public class Painting extends JPanel{
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
 
-		g.setColor(Color.GREEN);
+		g.setColor(Color.BLUE);
 		g.fillOval((int)x, (int)y, 50, 50);
 	}
 
