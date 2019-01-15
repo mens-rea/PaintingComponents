@@ -1,44 +1,29 @@
-import java.awt.*;
 import javax.swing.*;
-import javax.swing.JLabel;
+import java.awt.*;
 
 public class Painting extends JPanel{
+   public void paintComponent(Graphics g){
 
-	public void paintComponent(Graphics g){
-		super.paintComponent(g);
+       super.paintComponent(g);
+       g.fillOval(50, 150, 200, 250);
+       g.fillOval(150, 200, 255, 300);
+       g.fillOval(250, 300, 300, 250);
+       g.fillOval(350, 400, 200, 200);
+       g.setColor(Color.YELLOW);
+   }
 
-		g.fillOval(0, 250, 50, 100);
-		g.fillOval(0, 300, 60, 500);
-		g.fillOval(20, 300, 60, 500);
-		g.fillOval(50, 300, 60, 500);
-		g.setColor(Color.YELLOW);
+   public static void main(String args[]){
 
-		g.fillRect(100,200,200,200);
-		g.fillRect(500,200,300,400);
-	
+   JFrame myFrame = new JFrame("Painting");
+   JPanel Panel1 = new JPanel();
 
+   Painting myPainting = new Painting();
+   Panel1.setBackground(Color.RED);
 
-	}
+   				myFrame.add(myPainting);
+   			myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+   		myFrame.setSize(700,600);
+   	myFrame.setVisible(true);
 
-
-
-	public static void main(String args[]){
-		JFrame myFrame = new JFrame("Painting");
-		JPanel panel1 = new JPanel();
-         JLabel label = new JLabel("LOUIE ALDRIN CABRAL");
-         label.setVisible(true);
-         label.setSize(500,100);
-         myFrame.setResizable(false);
-         label.setBounds(100,200,200,200);
-		Painting myPainting = new Painting();
-
-		panel1.setBackground(Color.GREEN);
-
-          
-  myFrame.add(label);
-		myFrame.add(myPainting);
-		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		myFrame.setSize(700, 500);
-		myFrame.setVisible(true);
-	}
+       }
 }
