@@ -1,6 +1,5 @@
-import java.awt.*;
 import javax.swing.*;
-import javax.swing.JLabel;
+import java.awt.*;
 
 public class Painting extends JPanel{
 
@@ -57,23 +56,33 @@ public class Painting extends JPanel{
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
 
-		g.setColor(Color.GREEN);
+		g.setColor(Color.BLACK);
 		g.fillOval((int)x, (int)y, 50, 50);
-	}
-
+	 
+      g.setColor(Color.YELLOW);
+       g.fillOval(50, 150, 200, 250);
+       g.fillOval(150, 200, 255, 300);
+       g.fillOval(250, 300, 300, 250);
+       g.fillOval(350, 400, 200, 200);
+       
+   }
 
 
 	public static void main(String args[]){
 		JFrame myFrame = new JFrame("Painting");
 		JPanel panel1 = new JPanel();
-		
-		Painting myPainting = new Painting();
 
-		panel1.setBackground(Color.GREEN);
+   Painting myPainting = new Painting();
+   
 
+   	myFrame.add(myPainting);
+  
 		myFrame.setContentPane(myPainting);
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		myFrame.setSize(700, 500);
 		myFrame.setVisible(true);
 	}
 }
+
+
+
