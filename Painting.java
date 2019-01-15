@@ -6,12 +6,10 @@ public class Painting extends JPanel{
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
 
-		g.fillRect(40, 30, 50, 50);
-		g.fillRect(40, 30, 50, 50);
-		g.fillRoundRect(250, 30, 80, 70, 35, 35);
-		g.fillOval(0, 250, 50, 100);
-		g.fillOval(0, 250, 50, 100);
-		g.fillArc(120, 130, 110, 100, 5, 150);
+		g.fillRect(50, 50, 80, 100);
+		g.fillRoundRect(200, 50, 80, 70, 35, 35);
+		g.fillOval(50, 200, 50, 100);
+		g.fillArc(200, 200, 110, 100, 5, 150);
 	}
 
 	public static void main(String args[]){
@@ -22,7 +20,7 @@ public class Painting extends JPanel{
 
 		Painting myPainting = new Painting();
 
-		myPainting.setBackground(Color.RED);
+		myPainting.setBackground(Color.BLACK);
 		// panel1.setBackground(Color.GREEN);
 
 		myFrame.add(myPainting);
