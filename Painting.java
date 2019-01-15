@@ -1,5 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.JLabel;
 
 public class Painting extends JPanel{
 
@@ -60,16 +61,21 @@ public class Painting extends JPanel{
 		g.fillOval((int)x, (int)y, 50, 50);
 	}
 
+
+
 	public static void main(String args[]){
 		JFrame myFrame = new JFrame("Painting");
-		// JPanel panel1 = new JPanel();
-
+		JPanel panel1 = new JPanel();
+         JLabel label = new JLabel("LOUIE ALDRIN CABRAL");
+         label.setVisible(true);
+         label.setSize(500,100);
+         myFrame.setResizable(false);
+         label.setBounds(100,200,200,200);
 		Painting myPainting = new Painting();
 
-		// panel1.setBackground(Color.GREEN);
+		panel1.setBackground(Color.GREEN);
 
 		myFrame.setContentPane(myPainting);
-
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		myFrame.setSize(700, 500);
 		myFrame.setVisible(true);
