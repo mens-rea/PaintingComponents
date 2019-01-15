@@ -14,6 +14,8 @@ public class Painting extends JPanel{
 		g.setColor(Color.YELLOW);
 
 		g.fillRect(100,200,200,200);
+		g.fillRect(500,200,300,400);
+	
 
 
 	}
